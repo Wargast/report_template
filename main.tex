@@ -1,0 +1,144 @@
+\documentclass{article}
+
+%-------------Packages----------------
+\usepackage[french]{babel}
+\usepackage[latin1,utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+% \usepackage[sfdefault]{AlegreyaSans}
+\usepackage{fancyhdr} %Entête et pieds de page
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+% \usepackage{libertine}
+\usepackage{svg}
+% \usepackage{rotating}
+\usepackage{lscape}
+\usepackage[paper=portrait,pagesize]{typearea}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{subfiles}
+% \usepackage{dsfont}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+% Entêtes
+\usepackage{geometry}
+\geometry{hmargin=3cm,vmargin=3cm}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\lhead{sujet rapport}
+\rhead{INP Enseeiht}
+\rfoot{Page \thepage}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%\rfoot{Page \thepage}
+    %\fancyfoot[R]{\today}
+% Page modifiable page de garde
+    \setlength{\parindent}{0cm}
+    \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+    \newcommand{\hsp}{\hspace{2pt}}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+    
+    
+    %------------page de garde--------------------
+\begin{document}
+\begin{fontfamily}{phv}
+\begin{selectfont}
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+
+    \textsc{\LARGE INP-ENSEEIHT}\\[2cm]
+    
+    \includegraphics[scale=0.50]{pagedegarde/Title.png}~\\[1.5cm]
+
+    % Title
+    \HRule \\[0.4cm]
+        { \huge \bfseries TP PI3D \\[0.4cm] }
+
+    \HRule \\[2cm]
+    \includegraphics[scale=0.3]{pagedegarde/logouniv.png}
+    \\[2cm]
+
+    % Author and supervisor
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+        NOM \textsc{Prénom}\\
+        
+        Promo 2022\\
+      \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+       
+      \end{flushright}
+    \end{minipage}
+    
+
+    \vfill
+
+    % Bottom of the page
+    {\large 3\ ème{} Année 2020/2021 — Semestre 9}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+
+\newpage
+\pagenumbering{arabic}
+\renewcommand*\contentsname{Table des matières}
+\renewcommand{\baselinestretch}{0.0}\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+
+%-----------document-----------
+
+\newpage
+
+
+\input{Sections/introduction}
+
+\input{Sections/conclusion}
+
+\end{selectfont}
+\end{fontfamily}
+\end{document}
+
+
+
